@@ -43,3 +43,8 @@ Cargo.lock
 *.pdb
 
 # End of https://www.toptal.com/developers/gitignore/api/rust,haskell
+
+.vscode
+
+# Leave out advent of code inputs
+inputs/
