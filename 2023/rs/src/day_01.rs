@@ -4,20 +4,16 @@ fn a() {
     let lines: Vec<String> = read_to_string("../inputs/01a.txt")
         .unwrap()
         .lines()
-        .map(|s| String::from)
+        .map(String::from)
         .collect();
 
-    let sum = 0;
+    let mut sum = 0;
     for line in &lines {
-        let chars = line.chars();
-        for char in chars {
-            if char.is_digit(10) {
-                
-            }
-        }
+        sum += line.chars().find(|c| c.is_digit(10)).unwrap().to_digit(10).unwrap() * 10 + 
+            line.chars().rev().find(|c| c.is_digit(10)).unwrap().to_digit(10).unwrap();
     }
 
-    println!("{:?}", &lines);
+    println!("{:?}", sum);
 }
 
 fn b() {
