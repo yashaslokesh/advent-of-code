@@ -1,5 +1,3 @@
-use std::fs::read_to_string;
-
 fn a(lines: &Vec<String>) {
     let mut sum = 0;
     for line in lines {
@@ -58,14 +56,7 @@ fn b(lines: &Vec<String>) {
     println!("Day 1b: {}", sum);
 }
 
-pub fn run() {
-    // let lines: Vec<String> = read_to_string("../inputs/01example_b.txt")
-    let lines: Vec<String> = read_to_string("../inputs/01.txt")
-        .unwrap()
-        .lines()
-        .map(String::from)
-        .collect();
-
-    a(&lines);
-    b(&lines);
+pub fn run(input: &Vec<String>) {
+    a(&input);
+    b(&input);
 }
