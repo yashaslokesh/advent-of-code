@@ -1,11 +1,11 @@
-fn a(lines: &Vec<String>) {
+fn a(lines: &Vec<String>) -> u32 {
     let mut sum = 0;
     for line in lines {
         sum += line.chars().find(|c| c.is_digit(10)).unwrap().to_digit(10).unwrap() * 10 + 
             line.chars().rev().find(|c| c.is_digit(10)).unwrap().to_digit(10).unwrap();
     }
 
-    println!("Day 1a: {}", sum);
+    sum
 }
 
 fn match_with_num(s: &str) -> Result<u16, u16> {
@@ -47,16 +47,15 @@ fn process(s: &String, reverse: bool) -> u16 {
     0
 }
 
-fn b(lines: &Vec<String>) {
+fn b(lines: &Vec<String>) -> u16 {
     let mut sum: u16 = 0;
     for line in lines {
         sum += process(&line, false) * 10 + process(&line.chars().rev().collect::<String>(), true);
     }
-
-    println!("Day 1b: {}", sum);
+    sum
 }
 
 pub fn run(input: &Vec<String>) {
-    a(&input);
-    b(&input);
+    println!("Day 1a: {}", a(&input));
+    println!("Day 1b: {}", b(&input));
 }
