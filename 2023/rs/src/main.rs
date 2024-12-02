@@ -9,8 +9,8 @@ struct CliArgs {
 }
 
 fn get_lines(day: u8) -> Vec<String> {
-    format!("../inputs/{}.txt", format!("{:0>2}", day));
-    let lines: Vec<String> = read_to_string("../inputs/01.txt")
+    let path = format!("../inputs/{}.txt", format!("{:0>2}", day));
+    let lines: Vec<String> = read_to_string(path)
         .unwrap()
         .lines()
         .map(String::from)
