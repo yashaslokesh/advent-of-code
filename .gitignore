@@ -50,3 +50,8 @@ Cargo.lock
 
 # Leave out advent of code inputs
 inputs/
+
+
+# Added by cargo
+
+/target
