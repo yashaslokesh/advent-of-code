@@ -1,5 +1,37 @@
 .DS_Store
 
+# From https://github.com/github/gitignore/blob/main/OCaml.gitignore - START
+*.annot
+*.cmo
+*.cma
+*.cmi
+*.a
+*.o
+*.cmx
+*.cmxs
+*.cmxa
+
+# ocamlbuild working directory
+_build/
+
+# ocamlbuild targets
+*.byte
+*.native
+
+# oasis generated files
+setup.data
+setup.log
+# From https://github.com/github/gitignore/blob/main/OCaml.gitignore - END
+
+# Merlin configuring file for Vim and Emacs
+.merlin
+
+# Dune generated files
+*.install
+
+# Local OPAM switch
+_opam/
+
 # Created by https://www.toptal.com/developers/gitignore/api/rust,haskell
 # Edit at https://www.toptal.com/developers/gitignore?templates=rust,haskell
 
