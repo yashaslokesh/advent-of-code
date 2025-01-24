@@ -13,7 +13,8 @@ let part_2 lines =
 
 
 let main () =
-  let file = "../inputs/02.txt" in
+  (* let file = "../inputs/04.txt" in *)
+  let file = "../inputs/04_example.txt" in
   let lines = read_lines (open_in file) [] in
   part_1 lines |> string_of_int |> print_endline ;
   part_2 lines |> string_of_int |> print_endline ;;
